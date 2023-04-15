@@ -1,7 +1,5 @@
 # Un nuovo componente per la notifica
 
-Aggiungiamo un componente nella directory root.
-Copiamo nel nuovo componente la parte di template relativa alla notifica, e nel controller la funzione "clean".
-Il nuovo componente va importato nel componente "root"
-
+Colleghiamo la variabile "selezione" tra i componenti "root" e "notifica" inserendo una direttiva "@Input" nel componente notifica.
+E' necessario importare nel componente notifica la classe TempCity e la direttiva Input. 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2wtzrm)
