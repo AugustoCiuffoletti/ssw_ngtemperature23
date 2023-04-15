@@ -20,7 +20,10 @@ export class RootComponent implements OnInit {
     this.selezionata = name;
   }
   selezionata: string;
-    
+  clean() {
+    this.selezionata = undefined;
+  }
+
   constructor() {}
   ngOnInit() {}
 }

@@ -5,5 +5,8 @@
   <li *ngFor="let city of cities">
     <button (click)="seleziona(city.nome)">{{ city.nome }}</button>
   </li>
-  <p>La citta' selezionata e' {{ selezionata }}</p>
+  <p *ngIf = "selezionata !== undefined">
+   La citta' selezionata e' {{selezionata}}<br>
+  <button (click) = 'clean()'>Chiudi</button>
+  </p>
 </ul>
