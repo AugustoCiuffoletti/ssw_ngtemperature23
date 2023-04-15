@@ -1,9 +1,9 @@
-<h3> 
+<h3>
   {{ title }}
 </h3>
 <ul>
-  <li *ngFor='let city of cities' >
-    <b>{{city.nome}}</b> - {{city.valore}}
+  <li *ngFor="let city of cities">
+    <button (click)="seleziona(city.nome)">{{ city.nome }}</button>
   </li>
+  <p>La citta' selezionata e' {{ selezionata }}</p>
 </ul>
-  

@@ -1,10 +1,10 @@
 # Realizziamo una scansione nel template con ngFor
 
-Visualizziamo una serie di città con le relative temperature (non quelle reali).
-Per questo utilizziamo la direttiva "ngFor", che serve a realizzare una scansione nel template HTML.
-La direttiva fa parte del modulo esterno "CommonModule" che va importato nel componente "root".
-Tramite la direttiva ngFor viene scandito un array di oggetti della classe TempCity, ciascuno contenente una coppia (città,temperatura).
-La classe TempCity è dichiarata in un file, creato attraverso l'interfaccia grafica. Va importata nel componente per poter essere utilizzata.
-L'array da scandire si chiama "cities". è una proprietà del componente root. Viene inizializzato utilizzando il costruttore della classe TempCity.
+Sostituiamo ogni elemento della lista delle città con un bottone che seleziona la città corrispondente, che verrà mostrata in una riga di notifica.
+Per questo introduciamo dei bottoni collegati ad un metodo callback dichiarato nel componente.
+Il metodo, attivato al "click" si chiama "seleziona", e prende come parametro il nome di città mostrato nel bottone.
+Il metodo è inserito nel componente "root", quindi è una delle sue proprietà.
+Il metodo copia il valore di città ricevuto nella proprietà "selezionata" del componente "root".
+Il valore di questa proprietà è collegato nel template e visualizzato dinamicamente.
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2wtzrm)

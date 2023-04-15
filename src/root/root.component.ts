@@ -16,6 +16,11 @@ export class RootComponent implements OnInit {
     new TempCity('Milano', '15'),
     new TempCity('Genova', '18'),
   ];
+  seleziona(name: string) {
+    this.selezionata = name;
+  }
+  selezionata: string;
+    
   constructor() {}
   ngOnInit() {}
 }
