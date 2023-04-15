@@ -17,11 +17,14 @@ export class RootComponent implements OnInit {
     new TempCity('Genova', '18'),
   ];
   seleziona(name: string) {
-    this.selezionata = name;
+    var trovato: Array<TempCity> = this.cities.filter(
+      el => ( el.nome === name )
+    );
+    this.selezione = trovato[0];
   }
-  selezionata: string;
+  selezione: TempCity;
   clean() {
-    this.selezionata = undefined;
+    this.selezione = undefined;
   }
 
   constructor() {}

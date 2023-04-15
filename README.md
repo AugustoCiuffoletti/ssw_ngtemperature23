@@ -1,7 +1,8 @@
-# Visualizzazione condizionata di un elemento della View
+# Visualizziamo la temperatura associata ad una città
 
-La riga di notifica viene mostrata solo se la variabile che indica la città selezionata non è "undefined".
-Per questo utilizziamo un'altra direttiva nel template, "ngIf". Contiene la descrizione della condizione deve valere affinchè l'elemento sia visualizzato.
-Viene aggiungo anche un altro bottone collegato ad un altro callback "clean" che ha l'effetto di rimuovere la riga di notifica. 
+Vogliamo visualizzare la temperatura accanto alla nome della città nella riga di notifica.
+Per fare questo sostituiamo la stringa "selezionata" con un oggetto "selezione" della classe TempCity. Come la stringa, anche questo sarà condiviso tra View e Controller.
+Per selezionare l'oggetto nell'array utilizziamo una ricerca associativa, evitando l'uso di costrutti iterativi. Utilizziamo quindi il metodo "filter" applicato all'array "cities". Il metodo "seleziona" copia nella variabile "selezione" l'elemento TempCity che corrisponde al nome di città. 
+Nella view verrà inserita una notifica che visualizza le due proprietà dell'oggetto TempCity.
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2wtzrm)
