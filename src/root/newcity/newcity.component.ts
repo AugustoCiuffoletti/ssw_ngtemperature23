@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
 })
 export class NewcityComponent implements OnInit {
+  
+  @Output() newCityEvent = new EventEmitter<string>();
+  
   constructor() {}
 
   ngOnInit() {}
+
+  newCity(newName: string) {
+    this.newCityEvent.emit(newName);
+  }
 }
