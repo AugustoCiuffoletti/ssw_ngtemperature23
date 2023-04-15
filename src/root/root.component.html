@@ -1,4 +1,9 @@
 <h3> 
   {{ title }}
 </h3>
+<ul>
+  <li *ngFor='let city of cities' >
+    <b>{{city.nome}}</b> - {{city.valore}}
+  </li>
+</ul>
   

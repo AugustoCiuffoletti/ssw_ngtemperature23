@@ -1,11 +1,10 @@
-# Colleghiamo la nuova view
+# Realizziamo una scansione nel template con ngFor
 
-Eliminiamo la app "filler" in main.ts
-Modifichiamo index.html e main.ts per far riferimento al nuovo component. Sostituiamo my-app con app-root in index.html. In main.ts sostituiamo App con RootComponent, ed importiamo il file dove viene definito. Possiamo eliminare import inutili, e dobbiamo definire il nostro component come "standalone" per semplificarne la configurazione.
-Compare la stringa filler del nuovo componente: "root works!".
-
-
-Definiamo una proprietà "titolo" per la nostra classe
-Inseriamola nella nostra View, il template HTML
+Visualizziamo una serie di città con le relative temperature (non quelle reali).
+Per questo utilizziamo la direttiva "ngFor", che serve a realizzare una scansione nel template HTML.
+La direttiva fa parte del modulo esterno "CommonModule" che va importato nel componente "root".
+Tramite la direttiva ngFor viene scandito un array di oggetti della classe TempCity, ciascuno contenente una coppia (città,temperatura).
+La classe TempCity è dichiarata in un file, creato attraverso l'interfaccia grafica. Va importata nel componente per poter essere utilizzata.
+L'array da scandire si chiama "cities" e viene inizializzando utilizzando il costruttore della classe TempCity.
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2wtzrm)
