@@ -9,7 +9,7 @@ import { AjaxResponse } from 'rxjs/ajax';
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
   imports: [ CommonModule ],
-  providers: [ WeatherService],
+  providers: [ WeatherService ],
   standalone: true,
 })
 export class RootComponent implements OnInit {
