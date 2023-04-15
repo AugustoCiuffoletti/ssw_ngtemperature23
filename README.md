@@ -1,4 +1,4 @@
 # Comunicazione da figlio a padre
 
-Crea componente newcity e standalone, importa commonmodule e viene importato in root
+Costruzione dell'emitterr nel ts e predisposizione nel template dell'input box
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2wtzrm)
