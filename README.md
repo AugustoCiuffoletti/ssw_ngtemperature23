@@ -5,9 +5,6 @@ Modifichiamo index.html e main.ts per far riferimento al nuovo component. Sostit
 Compare la stringa filler del nuovo componente: "root works!".
 
 
-Aggiungiamo una riga nel main.ts per importare la classe che definisce il nuovo component
-Aggiungiamo una proprietà "standalone" nel nostro component
-Eliminiamo la classe filler "my-app" dal main.ts
 Definiamo una proprietà "titolo" per la nostra classe
 Inseriamola nella nostra View, il template HTML
 
