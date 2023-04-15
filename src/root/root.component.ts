@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TempCity } from './temp-city';
 import { WeatherService } from './weather.service';
 import { AjaxResponse } from 'rxjs/ajax';
+import { NotificaComponent } from './notifica/notifica.component';
 
 @Component({
   selector: 'app-root',
@@ -26,9 +27,6 @@ export class RootComponent implements OnInit {
     });
   }
   selezione: TempCity;
-  clean() {
-    this.selezione = undefined;
-  }
 
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
