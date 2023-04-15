@@ -5,7 +5,7 @@
 
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +17,20 @@ export class WeatherService {
     "https://api.openweathermap.org/data/2.5/weather?APPID=" +
     this.apiKey +
     "&units=metric&q=";
-  constructor(private http: HttpClient) { }
+//  constructor(private http: HttpClient) { }
 
-  public getData(CityName: string): Observable<string> {
-    return this.http.get<string>(this.URL+CityName);
+//  public getData(CityName: string): Observable<string> {
+//    return this.http.get<string>(this.URL+CityName);
+//  }
+
+  constructor() {}
+
+  public getData(CityName: string): Observable<AjaxResponse<string>> {
+    return ajax({
+      method: 'GET',
+      url: this.URL+CityName,
+      crossDomain: true,
+    });
   }
 }
   
