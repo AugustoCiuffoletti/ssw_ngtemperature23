@@ -28,6 +28,9 @@ export class RootComponent implements OnInit {
     });
   }
   selezione: TempCity;
+  addCity(newCity: string) {
+    this.cities.push(newCity);
+  }
 
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
