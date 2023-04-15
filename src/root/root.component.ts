@@ -9,14 +9,14 @@ import { NotificaComponent } from './notifica/notifica.component';
   selector: 'app-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule, NotificaComponent],
   providers: [WeatherService],
   standalone: true,
 })
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
-  cities: Array<string> = ['Torino','Milano','Genova'];
-  
+  cities: Array<string> = ['Torino', 'Milano', 'Genova'];
+
   seleziona(name: string) {
     this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
