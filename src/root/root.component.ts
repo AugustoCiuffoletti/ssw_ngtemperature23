@@ -4,13 +4,12 @@ import { TempCity } from './temp-city';
 import { WeatherService } from './weather.service';
 import { AjaxResponse } from 'rxjs/ajax';
 import { NotificaComponent } from './notifica/notifica.component';
-import { NewcityComponent } from './newcity/newcity.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
-  imports: [CommonModule, NotificaComponent, NewcityComponent],
+  imports: [ CommonModule, NotificaComponent ],
   providers: [WeatherService],
   standalone: true,
 })
