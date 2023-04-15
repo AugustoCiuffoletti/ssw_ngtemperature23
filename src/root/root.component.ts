@@ -14,14 +14,10 @@ import { AjaxResponse } from 'rxjs/ajax';
 })
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
-  cities: Array<TempCity> = [
-    new TempCity('Torino', '14'),
-    new TempCity('Milano', '15'),
-    new TempCity('Genova', '18'),
-  ];
+  cities: Array<string> = ['Torino','Milano','Genova'];
+  
   seleziona(name: string) {
-    var trovato: Array<TempCity> = this.cities.filter((el) => el.nome === name);
-    this.selezione = trovato[0];
+    this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
       next: (x: AjaxResponse<any>) =>
         (this.selezione.valore = x.response.main.temp),
