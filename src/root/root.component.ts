@@ -8,8 +8,8 @@ import { AjaxResponse } from 'rxjs/ajax';
   selector: 'app-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
-  imports: [ CommonModule ],
-  providers: [ WeatherService ],
+  imports: [CommonModule],
+  providers: [WeatherService],
   standalone: true,
 })
 export class RootComponent implements OnInit {
@@ -20,20 +20,20 @@ export class RootComponent implements OnInit {
     new TempCity('Genova', '18'),
   ];
   seleziona(name: string) {
-    var trovato: Array<TempCity> = this.cities.filter(
-      el => ( el.nome === name )
-    );
+    var trovato: Array<TempCity> = this.cities.filter((el) => el.nome === name);
     this.selezione = trovato[0];
     this.ws.getData(this.selezione.nome).subscribe({
-      next: ( x: AjaxResponse<any> ) => this.selezione.valore = x.response.main.temp,
-      error: err => console.error('Observer got an error: ' + JSON.stringify(err))
-    });  
+      next: (x: AjaxResponse<any>) =>
+        (this.selezione.valore = x.response.main.temp),
+      error: (err) =>
+        console.error('Observer got an error: ' + JSON.stringify(err)),
+    });
   }
   selezione: TempCity;
   clean() {
     this.selezione = undefined;
   }
 
-  constructor( private ws: WeatherService ) {}
+  constructor(private ws: WeatherService) {}
   ngOnInit() {}
 }
