@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common'
+
+@Component({
+  selector: 'app-newcity',
+  templateUrl: './newcity.component.html',
+  styleUrls: ['./newcity.component.css'],
+  imports: [ CommonModule ],
+  standalone: true
+})
+export class NewcityComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
