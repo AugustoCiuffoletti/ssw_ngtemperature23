@@ -2,6 +2,7 @@ import { Component, OnInit, VERSION } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TempCity } from './temp-city';
 import { WeatherService } from './weather.service';
+import { AjaxResponse } from 'rxjs/ajax';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,7 @@ export class RootComponent implements OnInit {
     );
     this.selezione = trovato[0];
     this.ws.getData(this.selezione.nome).subscribe({
-      next: ( x: any ) => this.selezione.valore = x.response.main.temp,
+      next: ( x: AjaxResponse<any> ) => this.selezione.valore = x.response.main.temp,
       error: err => console.error('Observer got an error: ' + JSON.stringify(err))
     });  
   }
