@@ -15,7 +15,6 @@ import { AjaxResponse } from 'rxjs/ajax';
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
   cities: Array<string> = ['Torino','Milano','Genova'];
-  
   seleziona(name: string) {
     this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
@@ -29,7 +28,6 @@ export class RootComponent implements OnInit {
   clean() {
     this.selezione = undefined;
   }
-
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
 }
