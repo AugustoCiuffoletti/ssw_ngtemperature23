@@ -10,14 +10,10 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class NotificaComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
   }
-  
   clean() {
     this.selezione = undefined;
   }
-
 }
