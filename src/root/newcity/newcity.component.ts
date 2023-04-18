@@ -9,13 +9,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
 })
 export class NewcityComponent implements OnInit {
-  
   @Output() newCityEvent = new EventEmitter<string>();
-  
   constructor() {}
-
   ngOnInit() {}
-
   newCity(newName: string) {
     this.newCityEvent.emit(newName);
   }
