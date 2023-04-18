@@ -17,7 +17,6 @@ import { NewcityComponent } from './newcity/newcity.component';
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
   cities: Array<string> = ['Torino', 'Milano', 'Genova'];
-
   seleziona(name: string) {
     this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
@@ -31,7 +30,6 @@ export class RootComponent implements OnInit {
   addCity(newCity: string) {
     this.cities.push(newCity);
   }
-
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
 }
