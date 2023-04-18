@@ -10,6 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class NewcityComponent implements OnInit {
   constructor() {}
-
   ngOnInit() {}
 }
